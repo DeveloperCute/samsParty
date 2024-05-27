@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOICE-SAM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h3 {
+            color: black;
+        }
+        .button, .button2 {
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            background-color: coral;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .button:hover {
+            transform: scale(1.1);
+        }
+        @media (max-width: 600px) {
+            .button, .button2 {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            .container {
+                margin: 10px;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FELIZ ANIVERSÁRIO MI BRADE</h1>
+        <h3>Gostaria de receber seu presente de aniversário?</h3>
+    </div>
+    <div>
+        <button class="button" onmouseover="moveButton(this)">SIM</button>
+        <a href="index3.html"><button class="button2">Não</button></a>
+    </div>
+
+    <script>
+        function moveButton(x) {
+            const maxX = window.innerWidth - x.offsetWidth;
+            const maxY = window.innerHeight - x.offsetHeight;
+            const marginX = Math.floor(Math.random() * maxX);
+            const marginY = Math.floor(Math.random() * maxY);
+            x.style.position = 'absolute';
+            x.style.top = marginY + 'px';
+            x.style.left = marginX + 'px';
+        }
+    </script>
+</body>
+</html>
